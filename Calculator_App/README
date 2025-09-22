@@ -1,0 +1,152 @@
+# Calculator Application
+
+A simple console-based calculator application written in Java that performs basic arithmetic operations on multiple numbers.
+
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Code Structure](#code-structure)
+- [Example Usage](#example-usage)
+- [Known Issues](#known-issues)
+- [Future Improvements](#future-improvements)
+- [Contributing](#contributing)
+
+## Overview
+
+This calculator application allows users to perform basic arithmetic operations (addition, subtraction, multiplication, and division) on a variable number of operands. The program is designed with a modular approach using multiple Java classes to handle different responsibilities.
+
+## Features
+
+- **Multiple Operands**: Supports operations on any number of integers
+- **Four Basic Operations**: Addition, Subtraction, Multiplication, and Division
+- **Interactive Menu**: User-friendly console interface
+- **Modular Design**: Clean separation of concerns across multiple classes
+- **Input Validation**: Handles user input through Scanner objects
+
+## Project Structure
+
+```
+Calculator_App/
+├── Main.java          # Entry point of the application
+├── Input.java         # Handles user input for numbers
+├── Selt.java          # Selection menu for operations
+├── Calc.java          # Contains arithmetic operation methods
+└── README             # Project documentation
+```
+
+## Requirements
+
+- **Java Development Kit (JDK)**: Version 8 or higher
+- **Operating System**: Windows, macOS, or Linux
+- **Memory**: Minimal (< 50MB)
+
+## Installation
+
+1. **Clone or Download** the project files to your local machine
+2. **Navigate** to the project directory:
+   ```bash
+   cd Calculator_App
+   ```
+3. **Compile** all Java files:
+   ```bash
+   javac *.java
+   ```
+
+## Usage
+
+1. **Run** the application:
+   ```bash
+   java Main
+   ```
+
+2. **Follow the prompts**:
+   - Enter the number of operands you want to calculate with
+   - Input each number when prompted
+   - Select the operation you want to perform (1-4)
+   - View the result
+
+## Code Structure
+
+### Main.java
+- Entry point of the application
+- Welcomes the user and gets the number of operands
+- Creates an Input object to handle number collection
+
+### Input.java
+- Handles collection of numbers from user input
+- Stores numbers in an integer array
+- Passes the array to the selection class
+
+### Selt.java (Selection)
+- Displays operation menu to the user
+- Handles operation selection (1-4)
+- Creates a Calc object and calls the appropriate method
+
+### Calc.java
+- Contains all arithmetic operation methods:
+  - `add()`: Addition of all numbers
+  - `sub()`: Subtraction of all numbers
+  - `mul()`: Multiplication of all numbers
+  - `div()`: Division of all numbers
+
+## Example Usage
+
+```
+Welcome to the Calculator!
+Please select no.of operands:
+3
+Enter the 1 number :
+10
+Enter the 2 number :
+5
+Enter the 3 number :
+2
+enter the operation to perform
+1 )  addition
+2 ) subtraction 
+3 )  multiplication
+4 ) division
+1
+1 )  addition
+the sum is :17
+```
+
+## Known Issues
+
+1. **Division by Zero**: The application doesn't handle division by zero errors
+2. **Integer Overflow**: Large numbers may cause integer overflow
+3. **Input Validation**: No validation for non-integer inputs
+4. **Logic Error in Operations**: 
+   - Subtraction and division start with 0, which may not be the intended behavior
+   - Multiplication starts with 0, resulting in always getting 0 as result
+
+## Future Improvements
+
+- [ ] Add input validation for non-numeric entries
+- [ ] Handle division by zero exceptions
+- [ ] Implement floating-point number support
+- [ ] Fix logic errors in subtraction, multiplication, and division operations
+- [ ] Add more advanced operations (power, square root, etc.)
+- [ ] Implement a GUI interface
+- [ ] Add unit tests for all methods
+- [ ] Improve error handling and user feedback
+
+## Contributing
+
+1. Fork the project
+2. Create a feature branch (`git checkout -b feature/improvement`)
+3. Commit your changes (`git commit -am 'Add some improvement'`)
+4. Push to the branch (`git push origin feature/improvement`)
+5. Create a Pull Request
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+**Note**: This is a educational project demonstrating basic Java programming concepts including classes, methods, arrays, and user input handling.
